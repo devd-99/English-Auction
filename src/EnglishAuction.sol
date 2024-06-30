@@ -3,6 +3,15 @@ pragma solidity ^0.8.13;
 
 contract EnglishAuction {
 
+    //auction states
+    bool public started;
+    bool public ended;
+    uint public endTime;
+
+    unint public highestBid;
+    address public highestBidder;
+    map(address => uint) public allBids;
+
     constructor() {
         //init values
         //owner and NFT
